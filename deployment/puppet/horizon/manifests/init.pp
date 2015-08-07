@@ -345,5 +345,19 @@ class horizon(
       mode   => '0755'
     }
   }
-
+exec {"/usr/share/openstack-dashboard/static/dashboard/img/":
+command => "mkdir -p /usr/share/openstack-dashboard/static/dashboard/img/",
+}
+file { "/usr/share/openstack-dashboard/static/dashboard/img/logo.png":
+                source => "puppet:///modules/horizon/logo.png",
+        }
+file { "/usr/share/openstack-dashboard/static/dashboard/img/logo-splash.png":
+                source => "puppet:///modules/horizon/logo-splash.png",
+        }
+file { "/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png":
+                source => "puppet:///modules/horizon/logo-splash.png",
+        }
+file { "/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png":
+                source => "puppet:///modules/horizon/logo-splash.png",
+        }
 }
