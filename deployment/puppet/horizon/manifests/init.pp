@@ -354,8 +354,8 @@ file { "/usr/share/openstack-dashboard/static/dashboard/img/logo.png":
 file { "/usr/share/openstack-dashboard/static/dashboard/img/logo-splash.png":
                 source => "puppet:///modules/horizon/logo-splash.png",
         }
-file { "/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png":
-                source => "puppet:///modules/horizon/logo-splash.png",
+file { "/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo.png":
+                source => "puppet:///modules/horizon/logo.png",
         }
 file { "/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png":
                 source => "puppet:///modules/horizon/logo-splash.png",
