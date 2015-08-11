@@ -346,8 +346,9 @@ class horizon(
     }
   }
 exec {"/usr/share/openstack-dashboard/static/dashboard/img/":
-command => "mkdir -p /usr/share/openstack-dashboard/static/dashboard/img/",
-}
+                path =>"/bin:/sbin:/bin/sh:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin",
+                command => "mkdir -p /usr/share/openstack-dashboard/static/dashboard/img/",
+        }
 file { "/usr/share/openstack-dashboard/static/dashboard/img/logo.png":
                 source => "puppet:///modules/horizon/logo.png",
         }
